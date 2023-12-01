@@ -45,7 +45,7 @@ public class hw3 {
 //				System.out.println();			
 //		}
 //		System.out.println("恭喜答對，答案就是"+ a21);
-
+//
 		System.out.println("請輸入不想要的數字(1-9)：");
 
 		int a3 = sc.nextInt();
@@ -64,26 +64,36 @@ public class hw3 {
 		System.out.println();
 		System.out.println("共有" + num + "個");
 		System.out.print("亂數印出6個號碼：");
-		
+		int a5[] = new int[6];
+
 		for (int t = 0; t <= 5; t++) {
-			int b = (int)(Math.random() * 45);
-			if(a4[b] != 0)
-				System.out.print(a4[b]+ " ");
+			int b = (int) (Math.random() * 45);
+			a5[t] = a4[b];
+			if (a4[b] != 0)
+				System.out.print("");
 			else
-				t--;					
+				t--;
+			for (int y = 0; y < t; y++) {
+				if (a5[t] == a5[y])
+					t--;
+			}
 		}
+		for (int y2 = 0; y2 < 6; y2++) {
+			System.out.print(a5[y2] + " ");
+		}
+
 	}
 
 	public void One(int a, int b, int c) {
-		if (a <= 0 || b <= 0 || c <= 0)
+		if (a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b || b + c <= a)
 			System.out.println("不是三角形");
+		else if ((a * a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == b * b + a * a))
+			System.out.println("直角三角形");
 		else if (a == b && a == c && b == c)
 			System.out.println("正三角形");
 		else if (a == b || a == c || b == c)
 			System.out.println("等腰三角形");
-		else if ((a * a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == b * b + a * a))
-			System.out.println("直角三角形");
-		else if (a + b >= c || a + c >= b || b + c >= a)
+		else
 			System.out.println("其他三角形");
 	}
 
