@@ -40,7 +40,8 @@ public class hw4 {
 //		for (int x1 = 0; x1 < s3.length; x1++) {
 //			for (int j1 = 0; j1 < s3[x1].length(); j1++) {
 //				char t = s3[x1].charAt(j1);
-//
+//				
+
 //				switch (t) {
 //				case 'a':
 //				case 'e':
@@ -79,24 +80,74 @@ public class hw4 {
 //		System.out.println("===========================================");
 //
 //		System.out.println("第五題");
+//		System.out.println("請輸入三個數字 YYYY年 MM月 DD日");
 //
+//		int yyyy = sc.nextInt();
+//		int MM = sc.nextInt();
+//		int DD = sc.nextInt();
+//		int sum = 0;
+//		int[] year = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+//
+//		if ((yyyy % 4 == 0 && yyyy % 100 != 0) || (yyyy % 400 == 0 && yyyy % 100 == 0)) {
+//			if (MM == 2 && DD > 29) {
+//				System.out.println("(月份輸入為2,則日期不該超過29)");
+//			} else {
+//				for (int i = 0; i < (MM - 1); i++) {
+//					sum += year[i];
+//				}
+//				sum += DD;
+//				System.out.println(sum+1);
+//			}
+//
+//		} else {
+//			if (MM == 2 && DD > 28) {
+//				System.out.println("(月份輸入為2,則日期不該超過28)");
+//			} else {
+//				for (int i = 0; i < (MM - 1); i++) {
+//					sum += year[i];
+//				}
+//				sum += DD;
+//				System.out.println(sum);
+//			}
+//		}
+
+
 //		System.out.println("===========================================");
 //
-		System.out.println("第六題");
-		int max = 0;
-		int[][] x6 = { { 1, 10, 37, 100, 77, 98, 90 }, { 2, 35, 75, 70, 95, 70, 80 }, { 3, 40, 77, 79, 70, 89, 100 },
-				{ 4, 100, 89, 90, 89, 90, 75 }, { 5, 90, 64, 75, 60, 75, 50 }, { 6, 85, 75, 70, 75, 90, 20 },
-				{ 7, 75, 70, 79, 85, 89, 99 }, { 8, 70, 95, 90, 89, 90, 75 } };
-		for (int i6 = 0; i6 < x6.length; i6++) {
-			for (int j6 = 0; j6 < x6[i6].length; j6++) {
-				if (x6[i6][j6] > max) {
-					max = x6[i6][j6];
-				}
-			}
-			System.out.println(i6); 
-			System.out.print(max + "\t");
-			max = 0;
-		}
+//		System.out.println("第六題");
+//		int[][] score = { { 10, 35, 40, 100, 90, 85, 75, 70 }, { 37, 75, 77, 89, 64, 75, 70, 95 },
+//				{ 100, 70, 79, 90, 75, 70, 79, 90 }, { 77, 95, 70, 89, 60, 75, 85, 89 },
+//				{ 98, 70, 89, 90, 75, 90, 89, 90 }, { 90, 80, 100, 75, 50, 20, 99, 75 } };
+//		int[] highestCount = new int[8];
+//		int[] maxScore = new int[6];
+//		int[] x62 = { 1, 2, 3, 4, 5, 6, 7, 8 };
+//		// 找出最大值
+//		for (int i6 = 0; i6 < score.length; i6++) {
+//			int max = 0;
+//			for (int j6 = 0; j6 < score[i6].length; j6++) {
+//				if (score[i6][j6] > max) {
+//					max = score[i6][j6];
+//					maxScore[i6] = max;
+//				}
+//			}
+//		}
+//		// 同學最高分次數相加
+//		for (int i1 = 0; i1 < score.length; i1++) {
+//			for (int j1 = 0; j1 < score[i1].length; j1++) {
+//				if (maxScore[i1] == score[i1][j1]) {
+//					highestCount[j1]++;
+//				}
+//			}
+//		}
+//		// 顯示同學
+//		for (int i = 0; i < x62.length; i++) {
+//			System.out.print(x62[i] + "號同學\t");
+//		}
+//		System.out.println();
+//		// 顯示次數
+//		for (int i = 0; i < highestCount.length; i++) {
+//			System.out.print(highestCount[i] + "次最高分\t");
+//		}
 
 	}
 
