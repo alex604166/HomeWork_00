@@ -1,4 +1,4 @@
-package hw1;
+package hw6;
 
 public abstract class Hero {
 	// 省略 getter/setter...

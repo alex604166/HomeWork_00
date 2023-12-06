@@ -1,4 +1,4 @@
-package hw1;
+package hw5;
 
 public class MyRectangleMain {
 

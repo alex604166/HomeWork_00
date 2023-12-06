@@ -1,28 +1,27 @@
-package hw1;
+package hw6;
 
-public class SwordMan extends Hero {
+public class ArrowMan extends Hero {
 	
-	public SwordMan() {
+	public ArrowMan() {
 		super();
 	}
-	
-	public SwordMan(String name, int level, double exp) {
+
+	public ArrowMan(String name, int level, double exp) {
 		super(name, level, exp);
 	}
-	
+
 	@Override
 	public void attack() {
-		System.out.println("揮劍");
+		System.out.println("放弓箭");
 	}
-	
+
 	@Override
 	public void move() {
 		System.out.println("跑步");
 	}
-	
+
 	@Override
 	public void defend() {
 		System.out.println("做防禦動作");
 	}
-	
 }

@@ -1,4 +1,4 @@
-package hw1;
+package hw6;
 
 public class RoleGameTest {
 
