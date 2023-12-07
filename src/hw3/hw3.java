@@ -87,7 +87,7 @@ public class hw3 {
 	public void One(int a, int b, int c) {
 		if (a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b || b + c <= a)
 			System.out.println("不是三角形");
-		else if ((a * a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == b * b + a * a))
+		else if ((a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == b * b + a * a))
 			System.out.println("直角三角形");
 		else if (a == b && a == c && b == c)
 			System.out.println("正三角形");

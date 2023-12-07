@@ -1,6 +1,6 @@
 package hw6;
 
-public abstract class Hero {
+public  class Hero {
 	// 省略 getter/setter...
 	
 	private String name;
@@ -17,9 +17,18 @@ public abstract class Hero {
 		this.exp = exp;
 	}
 	
-	public abstract void attack();
+	public  void attack() {
+		System.out.println("預設攻擊");
+	}
 	
-	public abstract void move();
+	public void move() {
+		System.out.println("預設移動");
+
+	}
 	
-	public abstract void defend();
+	public void defend() {
+		System.out.println("預設防禦");
+
+	}
+	
 }
