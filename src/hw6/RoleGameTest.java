@@ -11,6 +11,7 @@ public class RoleGameTest {
 		
 		archer.attack();
 		archer.move();
+
 	}
 
 }

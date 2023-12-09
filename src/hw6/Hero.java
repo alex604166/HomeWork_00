@@ -1,6 +1,6 @@
 package hw6;
 
-public  class Hero {
+public  class Hero implements attackable,moveable,defend{
 	// 省略 getter/setter...
 	
 	private String name;
@@ -9,6 +9,7 @@ public  class Hero {
 	
 	public Hero() {
 		this("David", 1, 0);
+		
 	}
 	
 	public Hero(String name, int level, double exp) {

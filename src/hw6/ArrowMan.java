@@ -1,6 +1,6 @@
 package hw6;
 
-public class ArrowMan extends Hero implements attackable,moveable,defend{
+public class ArrowMan extends Hero {
 	
 	public ArrowMan() {
 		super();
