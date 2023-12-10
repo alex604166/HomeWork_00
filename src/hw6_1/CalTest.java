@@ -44,6 +44,8 @@ public class CalTest {
 			} catch (RuntimeException r) {
 				r.printStackTrace();
 			}
+			sc.close();
 		}
+
 	}
 }

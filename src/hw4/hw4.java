@@ -38,7 +38,9 @@ public class hw4 {
 		String[] s3 = { "mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune" };
 		//先把陣列字串轉成陣列[索引值]字元放置t
 		for (int x1 = 0; x1 < s3.length; x1++) {
+			System.out.println(s3[x1]);
 			for (int j1 = 0; j1 < s3[x1].length(); j1++) {
+				System.out.println(s3[x1].charAt(j1));
 				char t = s3[x1].charAt(j1);
 				
 				switch (t) {

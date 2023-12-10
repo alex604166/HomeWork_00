@@ -1,6 +1,9 @@
 package hw3;
 
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Scanner;
+import java.util.Set;
 
 public class hw3 {
 	public static void main(String[] args) {
@@ -63,26 +66,24 @@ public class hw3 {
 		}
 		System.out.println();
 		System.out.println("共有" + num + "個");
-		System.out.print("亂數印出6個號碼：");
-		int a5[] = new int[6];
+		System.out.println("亂數印出6個號碼：");
+		Set s = new HashSet();
 
-		for (int t = 0; t <= 5; t++) {
+		while (s.size() != 6) {
 			int b = (int) (Math.random() * 45);
-			a5[t] = a4[b];
-			if (a4[b] != 0)
+			if (a4[b] == 0)
 				System.out.print("");
 			else
-				t--;
-			for (int y = 0; y < t; y++) {
-				if (a5[t] == a5[y])
-					t--;
-			}
-		}
-		for (int y2 = 0; y2 < 6; y2++) {
-			System.out.print(a5[y2] + " ");
+				s.add(a4[b]);
 		}
 
+		Iterator it = s.iterator();
+		while (it.hasNext())
+			System.out.println(it.next());
 	}
+//		for (int y2 = 0; y2 < 6; y2++) {
+//			System.out.print(a5[y2] + " ");
+//		}
 
 	public void One(int a, int b, int c) {
 		if (a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b || b + c <= a)
