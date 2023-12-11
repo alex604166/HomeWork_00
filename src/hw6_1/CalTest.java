@@ -8,7 +8,8 @@ public class CalTest {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		while (true) {
+		int answer = 0;
+		while (answer == 0) {
 			try {
 				Calculator c = new Calculator();
 				System.out.println("請輸入X值是:");
@@ -24,7 +25,8 @@ public class CalTest {
 						else if (y < 0)
 							throw new CalException("次方負數回傳不為整數!!!!");
 						else {
-							System.out.println(x + "的" + y + "次方等於" + c.powerXY(x, y));
+							answer = c.powerXY(x, y);
+							System.out.println(x + "的" + y + "次方等於" + answer);
 							break;
 						}
 					} else {
@@ -44,8 +46,7 @@ public class CalTest {
 			} catch (RuntimeException r) {
 				r.printStackTrace();
 			}
-			sc.close();
 		}
-
+		sc.close();
 	}
 }
