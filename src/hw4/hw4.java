@@ -33,40 +33,40 @@ public class hw4 {
 //		System.out.println();
 //		System.out.println("===========================================");
 //
-		System.out.println("第三題");
-		int sumAll = 0;
-		String[] s3 = { "mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune" };
-		//先把陣列字串轉成陣列[索引值]字元放置t
-		for (int x1 = 0; x1 < s3.length; x1++) {
-			System.out.println(s3[x1]);
-			for (int j1 = 0; j1 < s3[x1].length(); j1++) {
-				System.out.println(s3[x1].charAt(j1));
-				char t = s3[x1].charAt(j1);
-				
-				switch (t) {
-				case 'a':
-				case 'e':
-				case 'i':
-				case 'o':
-				case 'u':
-					sumAll += 1;
-					break;
-				}
-			}
-//			可參考
+//		System.out.println("第三題");
+//		int sumAll = 0;
+//		String[] s3 = { "mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune" };
+//		//先把陣列字串轉成陣列[索引值]字元放置t
+//		for (int x1 = 0; x1 < s3.length; x1++) {
 //			System.out.println(s3[x1]);
-		}
-		System.out.print("陣列");
-		for (int y = 0; y < s3.length; y++)
-			System.out.print(" " + s3[y] + " ");
-		System.out.println();
-		System.out.println("這陣列裡面共有多少個母音(a, e, i, o, u) 共 :" + sumAll + "個");
+//			for (int j1 = 0; j1 < s3[x1].length(); j1++) {
+//				System.out.println(s3[x1].charAt(j1));
+//				char t = s3[x1].charAt(j1);
+//				
+//				switch (t) {
+//				case 'a':
+//				case 'e':
+//				case 'i':
+//				case 'o':
+//				case 'u':
+//					sumAll += 1;
+//					break;
+//				}
+//			}
+////			可參考
+////			System.out.println(s3[x1]);
+//		}
+//		System.out.print("陣列");
+//		for (int y = 0; y < s3.length; y++)
+//			System.out.print(" " + s3[y] + " ");
+//		System.out.println();
+//		System.out.println("這陣列裡面共有多少個母音(a, e, i, o, u) 共 :" + sumAll + "個");
 //
 //		System.out.println("===========================================");
 //
 //		System.out.println("第四題");
 //		System.out.println("可借金額:");
-//		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 //		int j4 = sc.nextInt();
 //		int sum4 = 0;
 //		int[][] x4 = { { 25, 2500 }, { 32, 800 }, { 8, 500 }, { 19, 1000 }, { 27, 1200 } };
@@ -82,38 +82,47 @@ public class hw4 {
 
 //		System.out.println("===========================================");
 //
-//		System.out.println("第五題");
-//		System.out.println("請輸入三個數字 YYYY年 MM月 DD日");
-//
-//		int yyyy = sc.nextInt();
-//		int MM = sc.nextInt();
-//		int DD = sc.nextInt();
-//		int sum = 0;
-//		int[] year = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-//
-//		if ((yyyy % 4 == 0 && yyyy % 100 != 0) || (yyyy % 400 == 0 && yyyy % 100 == 0)) {
-//			if (MM == 2 && DD > 29) {
-//				System.out.println("(月份輸入為2,則日期不該超過29)");
-//			} else {
-//				for (int i = 0; i < (MM - 1); i++) {
-//					sum += year[i];
-//				}
-//				sum += DD;
-//				System.out.println(sum+1);
-//			}
-//
-//		} else {
-//			if (MM == 2 && DD > 28) {
-//				System.out.println("(月份輸入為2,則日期不該超過28)");
-//			} else {
-//				for (int i = 0; i < (MM - 1); i++) {
-//					sum += year[i];
-//				}
-//				sum += DD;
-//				System.out.println(sum);
-//			}
-//		}
+		System.out.println("第五題");
+		System.out.println("請輸入三個數字 YYYY年 MM月 DD日");
 
+		int yyyy = sc.nextInt();
+		int MM = sc.nextInt();
+		int DD = sc.nextInt();
+		int sum = 0;
+		int[] year = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+		if ((yyyy % 4 == 0 && yyyy % 100 != 0) || (yyyy % 400 == 0 && yyyy % 100 == 0)) {
+			if (MM == 2 && DD > 29) {
+				System.out.println("(月份輸入為2,則日期不該超過29)");
+
+			} else {
+				if (MM <= 2) {
+					for (int i = 0; i < (MM - 1); i++) {
+						sum += year[i];
+					}
+					sum += DD;
+					System.out.println(sum);
+				}
+
+				else {
+					for (int i = 0; i < (MM - 1); i++) {
+						sum += year[i];
+					}
+					sum += DD;
+					System.out.println(sum + 1);
+				}
+			}
+		} else {
+			if (MM == 2 && DD > 28) {
+				System.out.println("(月份輸入為2,則日期不該超過28)");
+			} else {
+				for (int i = 0; i < (MM - 1); i++) {
+					sum += year[i];
+				}
+				sum += DD;
+				System.out.println(sum);
+			}
+		}
 
 //		System.out.println("===========================================");
 //
@@ -131,6 +140,8 @@ public class hw4 {
 //				if (score[i6][j6] > max) {
 //					max = score[i6][j6];
 //					maxScore[i6] = max;
+//					
+//					System.out.println(maxScore[i6]);
 //				}
 //			}
 //		}

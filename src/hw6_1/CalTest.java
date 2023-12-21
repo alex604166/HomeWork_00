@@ -27,7 +27,6 @@ public class CalTest {
 						else {
 							answer = c.powerXY(x, y);
 							System.out.println(x + "的" + y + "次方等於" + answer);
-							break;
 						}
 					} else {
 						throw new InputMismatchException("格式不對，麻煩請重新輸入");
@@ -45,8 +44,13 @@ public class CalTest {
 
 			} catch (RuntimeException r) {
 				r.printStackTrace();
+			} finally {
+				if (answer != 0) {
+					sc.close();
+				}
+
 			}
 		}
-		sc.close();
+
 	}
 }
